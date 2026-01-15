@@ -2,7 +2,7 @@
   "name": "prince-kakadiya-portfolio",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://princekakadiya.github.io/Website-portfolio",
+  "homepage": "https://princekakadiya.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
