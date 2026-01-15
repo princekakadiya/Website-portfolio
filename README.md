@@ -1,18 +1,22 @@
 # Prince Kakadiya - Portfolio Website
 
-A modern, interactive portfolio website built with React, featuring a black and white theme with smooth animations.
+A modern, interactive portfolio website built with React, featuring a server-themed interface with boot animation, terminal aesthetics, and reactive UI elements.
 
 ## Features
 
+- **Server Boot Animation**: Terminal-style boot sequence on initial load
 - **Interactive Design**: Smooth animations and transitions using Framer Motion
 - **Black & White Theme**: Clean, professional monochrome design
+- **Reactive UI**: Server command-style interactions with terminal feedback
+- **Live Server Status**: Real-time uptime and request counter
+- **Terminal Aesthetics**: Code-themed elements, typing effects, and terminal prompts
 - **Responsive Layout**: Fully responsive design that works on all devices
 - **Sections**:
-  - Home/Hero section with profile photo placeholder
+  - Home/Hero section with typing effect and profile photo placeholder
   - About Me section
-  - Skills showcase
-  - Work Experience & Education
-  - Projects portfolio
+  - Skills showcase with code-style brackets
+  - Work Experience & Education with timeline
+  - Projects portfolio with interactive cards
   - Contact form with social links
   - Black-themed footer
 
@@ -86,6 +90,59 @@ All content is based on the CV information. Update the following files to custom
 - `src/components/Experience.jsx` - Work experience and education
 - `src/components/Projects.jsx` - Projects showcase
 - `src/components/Contact.jsx` - Contact information
+
+## Deployment
+
+### Deploy to GitHub Pages
+
+1. Create a new repository on GitHub
+2. Push your code:
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git push -u origin main
+```
+
+3. Install gh-pages:
+```bash
+npm install --save-dev gh-pages
+```
+
+4. Add to `package.json`:
+```json
+{
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "homepage": "https://YOUR_USERNAME.github.io/YOUR_REPO_NAME"
+}
+```
+
+5. Deploy:
+```bash
+npm run deploy
+```
+
+### Deploy to Vercel
+
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+### Deploy to Netlify
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Drag and drop the `dist` folder to [Netlify](https://app.netlify.com/drop)
 
 ## License
 
