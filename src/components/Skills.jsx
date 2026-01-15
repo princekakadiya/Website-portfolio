@@ -90,8 +90,7 @@ const Skills = () => {
                       scale: 1.15, 
                       backgroundColor: 'var(--primary-white)', 
                       color: 'var(--primary-black)',
-                      rotate: [0, -5, 5, -5, 0],
-                      transition: { duration: 0.3 }
+                      rotate: [0, -5, 5, -5, 0]
                     }}
                     transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                   >
