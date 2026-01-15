@@ -19,6 +19,26 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [bootComplete, setBootComplete] = useState(false)
 
+  // Handle redirect from 404.html
+  useEffect(() => {
+    if (sessionStorage.redirect) {
+      const redirect = sessionStorage.redirect
+      sessionStorage.removeItem('redirect')
+      window.history.replaceState(null, null, redirect)
+    }
+  }, [])
+
+  // Fallback: Skip boot animation after 15 seconds if it doesn't complete
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!bootComplete) {
+        setBootComplete(true)
+      }
+    }, 15000)
+
+    return () => clearTimeout(timeout)
+  }, [bootComplete])
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact']

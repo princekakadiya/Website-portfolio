@@ -41,10 +41,12 @@ const BootAnimation = ({ onComplete }) => {
       return () => clearInterval(typeInterval)
     } else {
       setTimeout(() => {
-        onComplete()
+        if (onComplete) {
+          onComplete()
+        }
       }, 1500)
     }
-  }, [currentStep])
+  }, [currentStep, onComplete])
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {
