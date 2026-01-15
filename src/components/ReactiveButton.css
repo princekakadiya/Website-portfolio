@@ -1,0 +1,82 @@
+.reactive-button {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+.reactive-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.reactive-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.reactive-button.primary {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+  border-color: var(--primary-white);
+}
+
+.reactive-button.primary:hover {
+  background-color: var(--accent-gray);
+  color: var(--primary-white);
+  border-color: var(--accent-gray);
+}
+
+.reactive-button.secondary {
+  background-color: transparent;
+  color: var(--primary-white);
+  border-color: var(--primary-white);
+}
+
+.reactive-button.secondary:hover {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+}
+
+.button-prefix {
+  color: var(--accent-gray);
+  font-weight: bold;
+}
+
+.response {
+  color: #27c93f;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reactive-button.clicked {
+  transform: scale(0.95);
+}

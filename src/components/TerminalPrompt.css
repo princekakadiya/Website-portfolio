@@ -1,0 +1,32 @@
+.terminal-prompt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--primary-white);
+  margin-bottom: 0.5rem;
+}
+
+.prompt-prefix {
+  color: var(--accent-gray);
+  font-weight: bold;
+}
+
+.command-text {
+  color: var(--primary-white);
+}
+
+.cursor {
+  color: var(--primary-white);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
