@@ -28,13 +28,13 @@ function App() {
     }
   }, [])
 
-  // Fallback: Skip boot animation after 15 seconds if it doesn't complete
+  // Fallback: Skip boot animation after 5 seconds if it doesn't complete
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (!bootComplete) {
         setBootComplete(true)
       }
-    }, 15000)
+    }, 5000)
 
     return () => clearTimeout(timeout)
   }, [bootComplete])
