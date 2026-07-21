@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaBriefcase, FaGraduationCap } from 'react-icons/fa'
+import { FaBriefcase, FaExternalLinkAlt, FaGraduationCap } from 'react-icons/fa'
 import './Experience.css'
 
 const Experience = () => {
@@ -81,18 +81,21 @@ const Experience = () => {
       title: 'Learn2Mask: A Predictive Encoding Framework for Energy-Efficient PCM Writes',
       venue: 'IEEE AIBThings 2025',
       doi: '10.1109/AIBThings66987.2025.11296234',
+      link: 'https://ieeexplore.ieee.org/document/11296234',
       description: 'Co-authored a machine learning-based predictive encoding framework that minimizes PCM write transitions using XGBoost, Logistic Regression, and Neural Networks.'
     },
     {
       title: 'Energy-Efficient Encoding for Multi-Level Cell PCM Using VQ-VAE-Based Masking',
       venue: 'IEEE IEMCON 2025',
       doi: '10.1109/IEMCON67450.2025.11381065',
+      link: 'https://ieeexplore.ieee.org/document/11381065',
       description: 'Developed a VQ-VAE-based encoding framework to reduce write energy, write disturbance, and improve reliability in Multi-Level Cell PCM.'
     },
     {
       title: 'Proactive Soft Error Prediction in Multi-Level Cell PCM Using Machine Learning',
       venue: 'IEEE IEMCON 2025',
       doi: '10.1109/IEMCON67450.2025.11381176',
+      link: 'https://ieeexplore.ieee.org/document/11381176',
       description: 'Co-authored an XGBoost-based framework for early soft-error detection in MLC PCM, improving reliability, endurance, and energy efficiency.'
     },
     {
@@ -244,21 +247,46 @@ const Experience = () => {
               <FaGraduationCap className="icon" />
               Publications & Research Contributions
             </h3>
-            {publications.map((publication, index) => (
-              <motion.div
-                key={index}
-                className="experience-item"
-                variants={itemVariants}
-                whileHover={{ scale: 1.02, x: 10 }}
-              >
-                <div className="experience-header-item">
-                  <h4 className="experience-title">{publication.title}</h4>
-                  <span className="experience-period">{publication.venue}</span>
-                </div>
-                <p className="experience-company">{publication.description}</p>
-                {publication.doi && <p className="experience-gpa">DOI: {publication.doi}</p>}
-              </motion.div>
-            ))}
+            <div className="publications-grid">
+              {publications.map((publication, index) => (
+                <motion.div
+                  key={index}
+                  className="experience-item publication-item"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02, y: -6 }}
+                >
+                  <div className="experience-header-item">
+                    <h4 className="experience-title">
+                      {publication.link ? (
+                        <a
+                          href={publication.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="publication-link"
+                        >
+                          {publication.title}
+                          <FaExternalLinkAlt className="publication-link-icon" />
+                        </a>
+                      ) : (
+                        publication.title
+                      )}
+                    </h4>
+                    <span className="experience-period">{publication.venue}</span>
+                  </div>
+                  <p className="experience-company">{publication.description}</p>
+                  {publication.doi && (
+                    <a
+                      href={publication.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="publication-doi"
+                    >
+                      DOI: {publication.doi}
+                    </a>
+                  )}
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
