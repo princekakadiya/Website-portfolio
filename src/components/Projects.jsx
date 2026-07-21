@@ -1,54 +1,55 @@
 import { motion } from 'framer-motion'
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import './Projects.css'
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Arab Bank',
-      description: 'The Arab Bank Portal project involves creating a secure and user-friendly online platform for banking services, including account management and fund transfers.',
+      title: 'Arab Bank Portal',
+      description: 'Designed and developed secure banking features using React.js, Node.js, and MongoDB.',
       details: [
-        'Emphasizes a robust technology stack, a well-designed interface, and adherence to regulatory standards.',
-        'Encompasses testing, integration, and user support, with plans for future enhancements to improve functionality and features.',
-        'Ensured regulatory compliance throughout the development process, meeting industry standards for security and data protection.'
+        'Implemented authentication, fund transfers, and account management with a focus on scalability and security.',
+        'Ensured regulatory compliance and adherence to industry security and data protection standards.',
+        'Focused on system integration, testing, and scalability for future feature enhancements.'
       ],
-      technologies: ['React', 'Node.js', 'MySQL', 'Security', 'Banking']
+      technologies: ['React.js', 'Node.js', 'MongoDB', 'Security', 'Banking']
     },
     {
       title: 'Volana',
-      description: 'Developed a social media platform integrating NFT technology, allowing users to claim ownership of their digital content.',
+      description: 'Designed and developed an NFT-enabled social media platform integrating NFTs using Solidity and Web3 technologies.',
       details: [
-        'Enabled users to share and discover visual content, such as photos and videos, with the added value of creating unique NFT-based collections.',
-        'Combined traditional social media features with innovative NFT technology, offering new ways for users to engage and monetize their digital assets.',
-        'Empowered users to monetize their digital creations, transforming traditional social media interactions into opportunities for revenue through NFT ownership.'
+        'Enabled users to share visual content and create unique NFT-based digital collections.',
+        'Empowered content creators to monetize digital assets through blockchain ownership.',
+        'Combined traditional social engagement with Solidity and Web3 integrations.'
       ],
-      technologies: ['React', 'Solidity', 'Web3', 'NFT', 'Blockchain']
+      technologies: ['Solidity', 'Web3', 'JavaScript', 'NFT', 'Blockchain']
     },
     {
       title: 'ARwall',
-      description: 'Developed an Augmented Reality (AR) platform, enabling businesses to enhance operations and customer experiences with virtual content.',
+      description: 'Built an Augmented Reality platform enabling businesses to enhance operations and customer engagement.',
       details: [
-        'Created both a web application and website, offering seamless access to AR tools and features.',
-        'Specialized in integrating AR technology into the physical world, adding virtual images and sounds to improve user engagement.'
+        'Developed both a web application and a website for seamless access to AR features.',
+        'Integrated virtual images and sounds into real-world environments for immersive experiences.',
+        'Created a browser-based experience using Node.js, HTML/CSS, and Next.js.'
       ],
-      technologies: ['AR', 'React', 'WebGL', '3D Graphics']
+      technologies: ['Node.js', 'HTML/CSS', 'Next.js', 'AR', 'Web Application']
     },
     {
-      title: 'PMS (Performance Management System)',
-      description: 'Developed a centralized employee portal, providing easy access to important company information, resources, and tools.',
+      title: 'Performance Management System',
+      description: 'Developed a centralized employee management portal for company resources and tools.',
       details: [
-        'Streamlined internal processes by integrating company news, policies, benefits, time tracking, and training resources into a single platform.',
-        'Enhanced employee productivity and engagement, offering a user-friendly interface for improved communication and collaboration.',
-        'Improved information management by consolidating various resources into a unified and accessible platform.'
+        'Integrated company news, policies, benefits, time tracking, and training modules.',
+        'Improved internal communication, productivity, and information accessibility.',
+        'Built a responsive web application backed by MongoDB.'
       ],
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express']
+      technologies: ['React.js', 'Web Application', 'MongoDB', 'Employee Portal']
     },
     {
       title: 'Intelligent Data Analysis System',
-      description: 'Designed and implemented a Python-based system to automate data cleaning, analysis, and visualization.',
+      description: 'Designed and implemented a Python-based system for automated data cleaning, analysis, and visualization.',
       details: [
-        'Integrated Pandas, NumPy, and Matplotlib libraries to create interactive reports for business decision-making.',
-        'Improved processing speed by 40% compared to manual analysis methods.'
+        'Utilized Pandas, NumPy, and Matplotlib to generate interactive reports for decision-making.',
+        'Improved data processing efficiency by 40% compared to manual workflows.',
+        'Automated repeatable analysis steps to make reporting faster and more reliable.'
       ],
       technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Data Analysis']
     }
@@ -128,34 +129,6 @@ const Projects = () => {
                 >
                   <span className="code-symbol">const</span> {project.title}
                 </motion.h3>
-                <div className="project-links">
-                  <motion.a
-                    href="#"
-                    className="project-link"
-                    whileHover={{ 
-                      scale: 1.3, 
-                      rotate: [0, -10, 10, -10, 0],
-                      boxShadow: '0 5px 15px rgba(255, 255, 255, 0.3)'
-                    }}
-                    whileTap={{ scale: 0.9 }}
-                    aria-label="View project"
-                  >
-                    <FaExternalLinkAlt />
-                  </motion.a>
-                  <motion.a
-                    href="#"
-                    className="project-link"
-                    whileHover={{ 
-                      scale: 1.3, 
-                      rotate: [0, 10, -10, 10, 0],
-                      boxShadow: '0 5px 15px rgba(255, 255, 255, 0.3)'
-                    }}
-                    whileTap={{ scale: 0.9 }}
-                    aria-label="View code"
-                  >
-                    <FaGithub />
-                  </motion.a>
-                </div>
               </div>
               <p className="project-description">{project.description}</p>
               <ul className="project-details">

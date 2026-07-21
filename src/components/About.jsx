@@ -85,8 +85,9 @@ const About = () => {
                 <TypingEffect
                   texts={[
                     'Full Stack Developer',
-                    'Computer Science Graduate',
-                    'React Specialist',
+                    'Computer Science MS Student',
+                    'Research Assistant',
+                    'Machine Learning Developer',
                     'Blockchain Developer',
                     'Problem Solver',
                   ]}
@@ -100,10 +101,10 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              Passionate full-stack developer with expertise in modern web technologies,
-              currently pursuing a Master's in Computer Science at California State University Northridge.
-              Specializing in React, Node.js, and blockchain technologies, with a strong focus on
-              creating efficient, scalable, and user-friendly applications.
+              Full-stack developer and computer science graduate student based in Los Angeles,
+              currently pursuing an M.S. in Computer Science at California State University,
+              Northridge. I build scalable React and Node.js applications and research machine
+              learning methods for improving Phase-Change Memory durability and energy efficiency.
             </motion.p>
 
             <motion.div
@@ -131,7 +132,7 @@ const About = () => {
                 <FaEnvelope />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/princekakadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -5 }}
@@ -185,20 +186,21 @@ const About = () => {
           <h2 className="section-title">About Me</h2>
           <div className="about-detail-text">
             <p>
-              I'm a passionate full-stack developer with a strong foundation in computer science,
-              currently pursuing my Master's degree at California State University Northridge.
-              With experience in both front-end and back-end development, I specialize in creating
-              comprehensive solutions that bridge user interface design with robust server-side logic.
+              I'm a full-stack developer with a strong foundation in computer science, currently
+              pursuing my Master's degree at California State University, Northridge with a 3.92 GPA.
+              With professional experience across React.js, Node.js, Express.js, and MongoDB, I build
+              production-ready applications that connect polished interfaces with reliable APIs.
             </p>
             <p>
-              My expertise spans modern web technologies including React, Node.js, and blockchain
-              technologies like Solidity and Web3. I'm also actively involved in research on Phase
-              Change Memory (PCM), working on optimizing durability and energy efficiency in memory systems.
+              My recent research focuses on Phase-Change Memory (PCM), including reinforcement
+              learning, Deep Q-Networks, predictive encoding, and adaptive wear-leveling strategies
+              that improve reliability, endurance, and energy efficiency in memory systems.
             </p>
             <p>
-              I'm certified as a Project Management Professional (PMP) and have experience with
-              data visualization tools like Tableau. My approach to development emphasizes clean code,
-              security best practices, and creating user-friendly applications that solve real-world problems.
+              My skill set spans JavaScript, TypeScript, Python, Java, SQL, Solidity, PyTorch,
+              Pandas, NumPy, Tableau, AWS, Azure, Docker, and CI/CD pipelines. My approach emphasizes
+              clean code, secure systems, data-driven problem solving, and user-friendly applications
+              that solve real-world problems.
             </p>
           </div>
         </motion.div>

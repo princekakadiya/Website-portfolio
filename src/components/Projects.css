@@ -15,7 +15,7 @@
   max-width: 800px;
 }
 
-.section-title {
+.projects-section .section-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-white);
@@ -25,15 +25,15 @@
   font-family: 'Courier New', monospace;
 }
 
-.section-title::before {
-  content: '03.';
+.projects-section .section-title::before {
+  content: '04.';
   color: var(--accent-gray);
   font-size: 1.5rem;
   margin-right: 0.5rem;
   font-weight: normal;
 }
 
-.section-title::after {
+.projects-section .section-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -43,7 +43,7 @@
   background-color: var(--primary-white);
 }
 
-.section-subtitle {
+.projects-section .section-subtitle {
   font-size: 1.2rem;
   color: var(--accent-gray);
   margin-top: 1.5rem;
@@ -215,7 +215,7 @@
     padding: 4rem 1rem;
   }
 
-  .section-title {
+  .projects-section .section-title {
     font-size: 2.5rem;
   }
 

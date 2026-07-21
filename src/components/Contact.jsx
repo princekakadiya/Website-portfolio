@@ -19,9 +19,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I will get back to you soon.')
+    const subject = encodeURIComponent(`Portfolio message from ${formData.name}`)
+    const body = encodeURIComponent(`${formData.message}\n\nFrom: ${formData.name} <${formData.email}>`)
+    window.location.href = `mailto:kakadiyaprince902@gmail.com?subject=${subject}&body=${body}`
     setFormData({ name: '', email: '', message: '' })
   }
 
@@ -49,7 +49,7 @@ const Contact = () => {
           >
             <h3 className="contact-info-title">Contact Information</h3>
             <p className="contact-info-description">
-              Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+              Feel free to reach out if you're looking for a developer, research collaborator, or just want to connect.
             </p>
 
             <div className="contact-details">
@@ -62,6 +62,18 @@ const Contact = () => {
                 <div>
                   <span className="contact-label">Email</span>
                   <span className="contact-value">kakadiyaprince902@gmail.com</span>
+                </div>
+              </motion.a>
+
+              <motion.a
+                href="tel:+17472063516"
+                className="contact-item"
+                whileHover={{ scale: 1.05, x: 10 }}
+              >
+                <FaPhone className="contact-icon" />
+                <div>
+                  <span className="contact-label">Phone</span>
+                  <span className="contact-value">(747) 206-3516</span>
                 </div>
               </motion.a>
 
@@ -86,7 +98,7 @@ const Contact = () => {
                 <FaMapMarkerAlt className="contact-icon" />
                 <div>
                   <span className="contact-label">Location</span>
-                  <span className="contact-value">Los Angeles, California</span>
+                  <span className="contact-value">Los Angeles, CA</span>
                 </div>
               </motion.div>
             </div>
@@ -111,7 +123,7 @@ const Contact = () => {
                 <FaEnvelope />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/princekakadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link-contact"

@@ -6,18 +6,21 @@ const BootAnimation = ({ onComplete }) => {
   const [currentStep, setCurrentStep] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
+  const typeSpeed = 6
+  const stepDelay = 100
+  const completeDelay = 400
 
   const bootMessages = [
-    { text: 'Initializing system...', delay: 500 },
-    { text: 'Loading kernel modules...', delay: 800 },
-    { text: 'Starting network services...', delay: 600 },
-    { text: 'Mounting file systems...', delay: 700 },
-    { text: 'Loading user interface...', delay: 600 },
-    { text: 'Connecting to database...', delay: 500 },
-    { text: 'Starting web server...', delay: 800 },
-    { text: 'Loading portfolio data...', delay: 700 },
-    { text: 'System ready.', delay: 1000 },
-    { text: 'Welcome to Prince Kakadiya\'s Portfolio Server', delay: 1200 },
+    { text: 'Initializing system...' },
+    { text: 'Loading kernel modules...' },
+    { text: 'Starting network services...' },
+    { text: 'Mounting file systems...' },
+    { text: 'Loading user interface...' },
+    { text: 'Connecting to database...' },
+    { text: 'Starting web server...' },
+    { text: 'Loading portfolio data...' },
+    { text: 'System ready.' },
+    { text: 'Welcome to Prince Kakadiya\'s Portfolio Server' },
   ]
 
   useEffect(() => {
@@ -34,9 +37,9 @@ const BootAnimation = ({ onComplete }) => {
           clearInterval(typeInterval)
           setTimeout(() => {
             setCurrentStep(currentStep + 1)
-          }, message.delay)
+          }, stepDelay)
         }
-      }, 30)
+      }, typeSpeed)
 
       return () => clearInterval(typeInterval)
     } else {
@@ -44,7 +47,7 @@ const BootAnimation = ({ onComplete }) => {
         if (onComplete) {
           onComplete()
         }
-      }, 1500)
+      }, completeDelay)
     }
   }, [currentStep, onComplete])
 

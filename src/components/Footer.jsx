@@ -72,7 +72,7 @@ const Footer = () => {
                 <FaEnvelope />
               </motion.a>
               <motion.a
-                href="https://github.com"
+                href="https://github.com/princekakadiya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"

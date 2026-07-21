@@ -4,7 +4,7 @@ import './Sidebar.css'
 
 const Sidebar = ({ activeSection }) => {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
+    { icon: FaGithub, href: 'https://github.com/princekakadiya', label: 'GitHub' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/princekakadiya/', label: 'LinkedIn' },
     { icon: FaEnvelope, href: 'mailto:kakadiyaprince902@gmail.com', label: 'Email' },
   ]

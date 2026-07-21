@@ -3,12 +3,14 @@ import './Skills.css'
 
 const Skills = () => {
   const skills = {
-    'Frontend': ['JavaScript', 'TypeScript', 'ReactJS', 'HTML', 'CSS', 'Tailwind CSS', 'Material UI', 'Bootstrap', 'jQuery'],
-    'Backend': ['NodeJS', 'Python', 'Express.js'],
-    'Database': ['MySQL', 'MongoDB', 'PostgreSQL', 'SQLite', 'NoSQL'],
+    'Programming': ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'Solidity'],
+    'Frontend': ['React.js', 'Three.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Material UI', 'Bootstrap', 'jQuery'],
+    'Backend': ['Node.js', 'Express.js', 'RESTful APIs', 'API Design', 'Microservices'],
+    'Database': ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite', 'NoSQL Databases'],
+    'Machine Learning & AI': ['PyTorch', 'Scikit-learn', 'Reinforcement Learning', 'DQN', 'Deep Learning', 'Model Training'],
+    'Data Analysis': ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Tableau', 'Statistical Analysis'],
     'Blockchain': ['Solidity', 'Web3'],
-    'Data Science': ['Pandas', 'NumPy'],
-    'Cloud & Tools': ['AWS', 'Azure', 'Git', 'GitHub', 'GitLab', 'JIRA']
+    'Cloud & DevOps': ['AWS', 'Microsoft Azure', 'Git', 'GitHub', 'GitLab', 'CI/CD Pipelines', 'Docker']
   }
 
   const containerVariants = {
@@ -85,14 +87,18 @@ const Skills = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: (catIndex * 0.1) + (index * 0.05) }}
                     whileHover={{ 
                       scale: 1.15, 
                       backgroundColor: 'var(--primary-white)', 
                       color: 'var(--primary-black)',
                       rotate: [0, -5, 5, -5, 0]
                     }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                    transition={{
+                      delay: (catIndex * 0.1) + (index * 0.05),
+                      type: 'spring',
+                      stiffness: 400,
+                      damping: 10,
+                    }}
                   >
                     {skill}
                   </motion.span>

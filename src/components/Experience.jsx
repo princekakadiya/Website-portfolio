@@ -6,41 +6,53 @@ const Experience = () => {
   const experiences = [
     {
       type: 'work',
-      title: 'Master Mentor – Research on Phase Change Memory (PCM)',
-      company: 'California State University, Northridge',
+      title: 'Research Assistant',
+      company: 'NSF REU Site, California State University, Northridge',
       location: 'Los Angeles, California',
-      period: 'June, 2025 - Present',
+      period: 'August 2025 - Present',
+      description: [
+        'Develop Python and PyTorch models using Deep Q-Networks to optimize Phase-Change Memory durability through intelligent wear-leveling and high-wear address remapping.',
+        'Process and analyze large datasets with Pandas and NumPy to identify performance and reliability trends.',
+        'Design adaptive algorithms that improve energy efficiency and wear-leveling in memory systems.'
+      ]
+    },
+    {
+      type: 'work',
+      title: 'Master Mentor, REU Lab',
+      company: 'U.S. National Science Foundation (NSF), California State University, Northridge',
+      location: 'Los Angeles, California',
+      period: 'June 2025 - July 2025',
       description: [
         'Mentored students on the project "Coding-Based Data Storage for Optimizing Durability and Energy Efficiency in PCM."',
-        'Guided research on improving write energy, reliability, and endurance of PCM systems through hardware/software approaches.',
-        'Supported implementation of memory-mapping algorithms and chip-level DNN design using flash memory.',
-        'Assisted in literature reviews, technical writing, and presentation preparation.'
+        'Guided research focused on improving write energy efficiency, reliability, and endurance of Phase-Change Memory systems.',
+        'Supported implementation of memory-mapping algorithms and chip-level DNN designs using flash memory.',
+        'Assisted with literature reviews, technical documentation, and research presentations for academic dissemination.'
       ]
     },
     {
       type: 'work',
       title: 'Full Stack Developer',
       company: 'Shaury Infotech',
-      location: 'Surat',
-      period: 'July, 2023 - September, 2024',
+      location: 'Surat, India',
+      period: 'July 2023 - September 2024',
       description: [
-        'Applied strong problem-solving abilities to identify and address technical issues, ensuring the smooth functionality of web applications.',
-        'Prioritized and implemented robust security measures to protect user data and ensure the confidentiality of transactions.',
-        'Implemented CI/CD pipelines to automate testing and deployment processes, streamlining development workflows.',
-        'Demonstrated a commitment to staying updated with the latest industry trends and technologies, ensuring the application of cutting-edge solutions in development projects.'
+        'Developed and maintained scalable React.js and Node.js applications used by 5,000+ users, reducing page load time by 30%.',
+        'Diagnosed and resolved production issues, improving application stability and reducing customer-reported defects.',
+        'Implemented secure authentication, authorization, and data protection mechanisms to safeguard user data.',
+        'Built and maintained CI/CD pipelines to automate testing and deployment and improve development efficiency.'
       ]
     },
     {
       type: 'work',
       title: 'Associate Software Engineer',
       company: 'Inexture Solution LLP',
-      location: 'Ahmedabad',
-      period: 'Jan, 2022 - June, 2023',
+      location: 'Ahmedabad, India',
+      period: 'Jan 2022 - June 2023',
       description: [
-        'Specialized in both front-end and back-end development, ensuring comprehensive solutions from user interface design to server-side logic and database management.',
-        'Successfully designed, maintained and implemented responsive web interfaces, prioritizing positive user experiences across various devices.',
-        'Created and maintained RESTful APIs using Node.js and Express.js, facilitating seamless communication between the front-end and back-end components of Web site.',
-        'Played a pivotal role in agile project management, contributing to collaborative efforts, coordinating tasks, and meeting project deadlines for timely deliveries.'
+        'Developed full-stack web applications using React.js, Node.js, Express.js, and MongoDB, delivering end-to-end features.',
+        'Designed and implemented responsive user interfaces optimized for multiple devices and browsers.',
+        'Developed and maintained RESTful APIs using Node.js and Express.js for seamless client-server communication.',
+        'Collaborated with Agile teams on sprint planning, code reviews, and scheduled feature delivery.'
       ]
     }
   ]
@@ -49,17 +61,44 @@ const Experience = () => {
     {
       type: 'education',
       degree: 'Master of Science in Computer Science',
-      school: 'California State University Northridge',
+      school: 'California State University, Northridge',
       location: 'Los Angeles, California',
-      period: 'January, 2025 - Present'
+      period: 'January 2025 - Present',
+      gpa: 'GPA: 3.92/4'
     },
     {
       type: 'education',
-      degree: 'Bachelors of Engineering in Information Technology',
+      degree: 'Bachelor of Engineering in Information Technology',
       school: 'Marwadi University',
-      location: 'Rajkot, Gujarat',
-      period: 'Jun, 2018 - May, 2022',
-      gpa: 'CGPA: 8.26/10'
+      location: 'Rajkot, Gujarat, India',
+      period: 'Jun 2018 - May 2022',
+      gpa: 'GPA: 8.26/10'
+    }
+  ]
+
+  const publications = [
+    {
+      title: 'Learn2Mask: A Predictive Encoding Framework for Energy-Efficient PCM Writes',
+      venue: 'IEEE AIBThings 2025',
+      doi: '10.1109/AIBThings66987.2025.11296234',
+      description: 'Co-authored a machine learning-based predictive encoding framework that minimizes PCM write transitions using XGBoost, Logistic Regression, and Neural Networks.'
+    },
+    {
+      title: 'Energy-Efficient Encoding for Multi-Level Cell PCM Using VQ-VAE-Based Masking',
+      venue: 'IEEE IEMCON 2025',
+      doi: '10.1109/IEMCON67450.2025.11381065',
+      description: 'Developed a VQ-VAE-based encoding framework to reduce write energy, write disturbance, and improve reliability in Multi-Level Cell PCM.'
+    },
+    {
+      title: 'Proactive Soft Error Prediction in Multi-Level Cell PCM Using Machine Learning',
+      venue: 'IEEE IEMCON 2025',
+      doi: '10.1109/IEMCON67450.2025.11381176',
+      description: 'Co-authored an XGBoost-based framework for early soft-error detection in MLC PCM, improving reliability, endurance, and energy efficiency.'
+    },
+    {
+      title: 'Complement-Based Self-Healing Memory with Adaptive Thresholds and Reinforcement Learning',
+      venue: 'In progress',
+      description: 'Researching self-healing memory controllers using adaptive thresholds and Deep Q-Networks for hot/cold address detection and remapping.'
     }
   ]
 
@@ -190,6 +229,34 @@ const Experience = () => {
                   {edu.school} • {edu.location}
                 </p>
                 {edu.gpa && <p className="experience-gpa">{edu.gpa}</p>}
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className="publications"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h3 className="subsection-title">
+              <FaGraduationCap className="icon" />
+              Publications & Research Contributions
+            </h3>
+            {publications.map((publication, index) => (
+              <motion.div
+                key={index}
+                className="experience-item"
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, x: 10 }}
+              >
+                <div className="experience-header-item">
+                  <h4 className="experience-title">{publication.title}</h4>
+                  <span className="experience-period">{publication.venue}</span>
+                </div>
+                <p className="experience-company">{publication.description}</p>
+                {publication.doi && <p className="experience-gpa">DOI: {publication.doi}</p>}
               </motion.div>
             ))}
           </motion.div>
