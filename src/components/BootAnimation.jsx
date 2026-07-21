@@ -6,21 +6,16 @@ const BootAnimation = ({ onComplete }) => {
   const [currentStep, setCurrentStep] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [showCursor, setShowCursor] = useState(true)
-  const typeSpeed = 6
-  const stepDelay = 100
+  const typeSpeed = 14
+  const stepDelay = 180
   const completeDelay = 400
 
   const bootMessages = [
-    { text: 'Initializing system...' },
-    { text: 'Loading kernel modules...' },
-    { text: 'Starting network services...' },
-    { text: 'Mounting file systems...' },
-    { text: 'Loading user interface...' },
-    { text: 'Connecting to database...' },
+    { text: 'Initializing portfolio...' },
+    { text: 'Loading research data...' },
+    { text: 'Preparing interface...' },
     { text: 'Starting web server...' },
-    { text: 'Loading portfolio data...' },
     { text: 'System ready.' },
-    { text: 'Welcome to Prince Kakadiya\'s Portfolio Server' },
   ]
 
   useEffect(() => {
