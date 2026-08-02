@@ -43,22 +43,8 @@ const About = () => {
               whileHover={{ scale: 1.05, rotate: 2 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="profile-image-placeholder profile-video-frame">
-                <video
-                  className="profile-video"
-                  src="/media/profile-video.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  onCanPlay={(event) => {
-                    event.currentTarget.play().catch(() => {})
-                  }}
-                  aria-label="Prince Kakadiya profile video"
-                >
-                  <span className="profile-initials">PK</span>
-                </video>
+              <div className="profile-image-placeholder">
+                <span className="profile-initials">PK</span>
               </div>
               <div className="profile-image-border"></div>
             </motion.div>
