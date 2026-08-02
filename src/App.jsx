@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import EmailSidebar from './components/EmailSidebar'
 import About from './components/About'
+import DemoVideo from './components/DemoVideo'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
@@ -41,7 +42,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact']
+      const sections = ['home', 'about', 'demo', 'skills', 'experience', 'projects', 'contact']
       const scrollPosition = window.scrollY + 200
 
       for (const section of sections) {
@@ -74,6 +75,7 @@ function App() {
           <Header activeSection={activeSection} />
           <main>
             <About />
+            <DemoVideo />
             <Skills />
             <Experience />
             <Projects />
