@@ -4,6 +4,26 @@ import './Projects.css'
 const Projects = () => {
   const projects = [
     {
+      title: 'Build AI Knowledge Assistant',
+      description: 'Built an AI-powered assistant that helps users search, summarize, and retrieve knowledge from structured and unstructured content.',
+      details: [
+        'Designed a conversational interface for asking questions and receiving context-aware responses.',
+        'Integrated document ingestion and retrieval workflows to surface relevant knowledge quickly.',
+        'Focused on practical usability, response clarity, and scalable full-stack architecture.'
+      ],
+      technologies: ['AI', 'React.js', 'Node.js', 'Python', 'Knowledge Retrieval']
+    },
+    {
+      title: 'Memory Lab',
+      description: 'Created a research-focused lab experience for exploring memory-system behavior, reliability, and energy-efficiency concepts.',
+      details: [
+        'Modeled Phase-Change Memory concepts including endurance, wear-leveling, and write optimization.',
+        'Built interactive analysis flows for comparing reliability and energy-efficiency outcomes.',
+        'Connected research ideas with a clear interface for experimentation and presentation.'
+      ],
+      technologies: ['Python', 'React.js', 'PCM', 'Data Visualization', 'Research']
+    },
+    {
       title: 'Arab Bank Portal',
       description: 'Designed and developed secure banking features using React.js, Node.js, and MongoDB.',
       details: [
