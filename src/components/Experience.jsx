@@ -7,26 +7,15 @@ const Experience = () => {
     {
       type: 'work',
       title: 'Research Assistant',
-      company: 'NSF REU Site, California State University, Northridge',
+      company: 'U.S. National Science Foundation (NSF) REU Site, CSUN',
       location: 'Los Angeles, California',
-      period: 'August 2025 - Present',
+      period: 'June 2025 - Present',
       description: [
-        'Develop Python and PyTorch models using Deep Q-Networks to optimize Phase-Change Memory durability through intelligent wear-leveling and high-wear address remapping.',
-        'Process and analyze large datasets with Pandas and NumPy to identify performance and reliability trends.',
-        'Design adaptive algorithms that improve energy efficiency and wear-leveling in memory systems.'
-      ]
-    },
-    {
-      type: 'work',
-      title: 'Master Mentor, REU Lab',
-      company: 'U.S. National Science Foundation (NSF), California State University, Northridge',
-      location: 'Los Angeles, California',
-      period: 'June 2025 - July 2025',
-      description: [
-        'Mentored students on the project "Coding-Based Data Storage for Optimizing Durability and Energy Efficiency in PCM."',
-        'Guided research focused on improving write energy efficiency, reliability, and endurance of Phase-Change Memory systems.',
-        'Supported implementation of memory-mapping algorithms and chip-level DNN designs using flash memory.',
-        'Assisted with literature reviews, technical documentation, and research presentations for academic dissemination.'
+        'Develop Python and PyTorch Deep Q-Network models to improve Phase-Change Memory durability through adaptive wear-leveling and high-wear address remapping.',
+        'Process large experimental datasets with Pandas and NumPy to identify performance, energy, and reliability trends.',
+        'Design adaptive algorithms for energy-efficient memory operation and evaluate remapping policies across workload patterns.',
+        'Mentor undergraduate researchers on coding-based data storage for improving PCM durability and write energy efficiency.',
+        'Support memory-mapping algorithm and chip-level DNN implementations using flash-memory architectures.'
       ]
     },
     {
@@ -69,9 +58,9 @@ const Experience = () => {
     {
       type: 'education',
       degree: 'Bachelor of Engineering in Information Technology',
-      school: 'Marwadi University',
+      school: 'Gujarat Technological University',
       location: 'Rajkot, Gujarat, India',
-      period: 'Jun 2018 - May 2022',
+      period: 'June 2018 - May 2022',
       gpa: 'GPA: 8.26/10'
     }
   ]
